@@ -9,7 +9,7 @@ const app = express();
 app.set('views', 'views');
 
 // listen for requests
-app.listen(3001);
+app.listen(3000);
 
 // home
 app.get('/', (req, res) => {
