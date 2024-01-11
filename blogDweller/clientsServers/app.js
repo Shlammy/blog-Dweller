@@ -5,10 +5,11 @@ const app = express();
 
 
 // register view enginge
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 // listen for requests
-app.listen(3000);
+app.listen(3001);
 
 // home
 app.get('/', (req, res) => {
