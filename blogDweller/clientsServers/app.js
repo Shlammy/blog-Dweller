@@ -5,15 +5,19 @@ const app = express();
 
 
 // register view enginge
-// app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set('view engine', 'ejs');
 
 // listen for requests
 app.listen(3000);
 
 // home
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home' });
+    const blogs = [
+        {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+        {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+        {title: 'How to defeat Bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+    ];
+    res.render('index', { title: 'Home', blogs: blogs });
 });
 
 // about

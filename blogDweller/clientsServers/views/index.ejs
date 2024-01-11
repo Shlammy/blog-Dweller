@@ -10,18 +10,28 @@
 	
     <nav>
         <div class="site-title">
-            <a href="/"><h1>Blog Dweller</h1></a>
-            <p>A Net Dweller Site</p>
+          <a href="/"><h1>Blog Dweller</h1></a>
+          <p>A Net Dweller Site</p>
         </div>
         <ul>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs/create">New Blog</a></li>
+          <li><a href="/">Blogs</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blogs/create">New Blog</a></li>
         </ul>
     </nav>
 
     <div class="blogs content">
-        <h2>All Dweller Blogs</h2>
+      <h2>All Dweller Blogs</h2>
+
+      <% if(blogs.length > 0) { %>
+        <% blogs.forEach(blog => { %>
+          <h3 class="title"><%= blog.title %></h3>
+          <p class="snippet"><%= blog.snippet %></p>
+        <% }); %> 
+      <% } else { %>
+        <p>There are no blogs to display...</p>
+      <% } %>
+        
     </div>
   </body>
 </html>
