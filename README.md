@@ -1,2 +1,2 @@
 # blogDweller
-blog creation/storage
+blog creation/storage created with MERN application stack.
